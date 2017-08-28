@@ -37,7 +37,7 @@ class Test extends CI_Controller {
     }
 
     function _preview($output = null){
-        $this->load->view('our_template.php',$output);
+        $this->load->view('view_test.php',$output);
     }
 
 }
