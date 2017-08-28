@@ -19,14 +19,23 @@ class Welcome extends CI_Controller {
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
 	function __construct(){
-        	parent::__construct(); 
+        	parent::__construct();
 		$this->load->database();
- 
+
 	}
-	
+
 	public function index()
 	{
 		$this->load->view('welcome_message');
 	}
+    public function employees(){
+        $crud = new grocery_CRUD();
+        $crud->set_table('employees');
+        $output = $this->grocery_crud->render();
+        echo "<pre>";
+        print_r($output);
+        echo "</pre>";
+        die();
+    }
 
 }
