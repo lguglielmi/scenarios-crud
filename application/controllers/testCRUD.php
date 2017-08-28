@@ -28,5 +28,14 @@ class Welcome extends CI_Controller {
 	{
 		$this->load->view('welcome_message');
 	}
+    public function scenarios(){
+        $crud = new grocery_CRUD();
+        $crud->set_table('criss_scenarios');
+        $output = $this->grocery_crud->render();
+        echo "<pre>";
+        print_r($output);
+        echo "</pre>";
+        die();
+    }
 
 }
