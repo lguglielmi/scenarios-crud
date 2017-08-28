@@ -19,7 +19,7 @@ class Test extends CI_Controller {
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
 	function __construct(){
-        	parent::__construct();
+        parent::__construct();
 		$this->load->database();
         $this->load->library('grocery_CRUD');
 
@@ -33,10 +33,6 @@ class Test extends CI_Controller {
         $crud = new grocery_CRUD();
         $crud->set_table('criss_scenarios');
         $output = $this->grocery_crud->render();
-        echo "<pre>";
-        print_r($output);
-        echo "</pre>";
-        die();
     }
 
 }
