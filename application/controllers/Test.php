@@ -33,6 +33,11 @@ class Test extends CI_Controller {
         $crud = new grocery_CRUD();
         $crud->set_table('criss_scenarios');
         $output = $this->grocery_crud->render();
+        $this->_preview($output);
+    }
+
+    function _preview($output = null){
+        $this->load->view('our_template.php',$output);
     }
 
 }
