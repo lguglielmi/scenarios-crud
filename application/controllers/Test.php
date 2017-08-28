@@ -21,9 +21,13 @@ class Test extends CI_Controller {
 	function __construct(){
         	parent::__construct();
 		$this->load->database();
+        $this->load->library('grocery_CRUD');
 
 	}
 
+	public function index(){
+		$this->load->view('welcome_message');
+	}
 
     public function scenarios(){
         $crud = new grocery_CRUD();
