@@ -24,10 +24,10 @@ class test extends CI_Controller {
 
 	}
 
-	public function index()
-	{
+	public function index(){
 		$this->load->view('welcome_message');
 	}
+
     public function scenarios(){
         $crud = new grocery_CRUD();
         $crud->set_table('criss_scenarios');
